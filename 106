@@ -1,0 +1,22 @@
+#include<stdio.h>
+struct Item
+{
+	char item_name[50];
+	int quantity;
+	float price;
+}I1;
+void Read_Item(){
+	printf("Enter item name\n");
+	gets(I1.item_name);
+	printf("Enter quantity\n");
+	scanf("%d",&I1.quantity);
+	printf("Enter price\n");
+	scanf("%f",&I1.price);
+	float amount;
+	amount = I1.quantity * I1.price;
+	printf("Final amount is %f",amount);
+}
+int main(){
+	Read_Item();
+	return 0;
+}
