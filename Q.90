@@ -1,0 +1,25 @@
+#include<stdio.h>
+#include<string.h>
+int main()
+{
+	char a[50];
+	printf("Enter any string\n");
+	gets(a);
+	int n=strlen(a);
+	char *ptr=a;
+	int sp=0;
+	int len=0;
+	for(int i=0;i<n;i++)
+	{
+		if(*(ptr+i)==' ')
+		{
+			sp++;
+		}
+		else{
+			len++;
+		}
+	}
+	printf("Including spaces %d",len+sp);
+	printf("\n");
+	printf("Excluding spaces %d",len);
+}
