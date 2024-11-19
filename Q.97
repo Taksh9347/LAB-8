@@ -1,0 +1,21 @@
+#include<stdio.h>
+#include<string.h>
+int main()
+{
+	char arr[50];
+	printf("Enter any string\n");
+	gets(arr);
+	char *ptr = strlwr(arr);
+	int vowel=0;
+	while(*ptr!='\0')
+	{
+		char ch=*ptr;
+		if(ch=='a'||ch=='e'||ch=='i'||ch=='o'||ch=='u')
+		{
+			vowel++;
+		}
+		ptr++;
+	}
+	printf("Number of vowels = %d",vowel);
+	return 0;
+}
