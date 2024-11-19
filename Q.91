@@ -1,0 +1,15 @@
+#include<stdio.h>
+#include<string.h>
+int main()
+{
+	int n;
+	printf("Enter a number\n");
+	scanf("%d",&n);
+	int *ptr;
+	ptr=&n;
+	int square=(*ptr)*(*ptr);
+	int cube=(*ptr)*(*ptr)*(*ptr);
+	printf("square=%d\n",square);
+	printf("cube=%d",cube);
+	return 0;
+}
