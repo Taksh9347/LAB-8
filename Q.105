@@ -1,0 +1,36 @@
+#include<stdio.h>
+#include<string.h>
+void permu(char *s,int a,int n);
+void swap(char *a,char *b);
+int main()
+{
+	char str[5];
+	printf("Enter a string \n");
+	gets(str);
+	int n= strlen(str);
+	printf("PERMUTATIONS\n");
+	permu(str , 0, n-1);
+	
+}
+void permu(char *s,int a,int n)
+{
+	if(a==n)
+	{
+		printf("%s ",s);
+	}
+	else
+	{
+	    for(int j=a;j<=n;j++){
+	    swap((s+a),(s+j));
+		permu(s,a+1,n);
+		swap((s+a),(s+j));
+		}
+	}
+}
+void swap(char *A,char *B)
+{
+	char temp;
+	temp = *A;
+	*A=*B;
+	*B=temp;
+}
