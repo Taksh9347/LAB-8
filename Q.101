@@ -1,0 +1,12 @@
+#include<stdio.h>
+#include<stdlib.h>
+int main()
+{
+	FILE *fptr = fopen("LNMIITSTUDENT.DAT.txt","a");
+	char info[100];
+	printf("Enter information to file\n");
+	gets(info);
+	fputs(info,fptr);
+	fclose(fptr);
+	return 0;	
+}
